@@ -32,20 +32,26 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 // CORS - restrict to configured client origin(s)
-const allowedOrigins = (process.env.CLIENT_ORIGIN || "http://localhost:5173")
-  .split(",")
-  .map((origin) => origin.trim());
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://nlp-if5t.vercel.app",
+];
 
 app.use(
   cors({
     origin: (origin, callback) => {
+      // Allow requests without an Origin header
+      // and requests from our allowed frontend URLs.
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
+        console.log("Blocked CORS origin:", origin);
         callback(new Error("Not allowed by CORS"));
       }
     },
     credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
@@ -90,6 +96,8 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(`NLP API server running on port ${PORT} [${process.env.NODE_ENV || "development"}]`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(
+    `NLP API server running on port ${PORT} [${process.env.NODE_ENV || "development"}]`
+  );
 });
