@@ -34,7 +34,7 @@ if (process.env.NODE_ENV !== "production") {
 // CORS - restrict to configured client origin(s)
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://nlp-if5t.vercel.app",
+  "https://nlp-ift5.vercel.app",
 ];
 
 app.use(
