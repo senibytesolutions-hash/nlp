@@ -35,7 +35,10 @@ if (process.env.NODE_ENV !== "production") {
 const allowedOrigins = [
   "http://localhost:5173",
   "https://nlp-ift5.vercel.app",
-];
+  "https://www.nationallawyersparliament.org",
+  "https://nationallawyersparliament.org", // without www, in case someone visits that way
+  process.env.CLIENT_ORIGIN,
+].filter(Boolean); // removes any undefined values
 
 app.use(
   cors({
