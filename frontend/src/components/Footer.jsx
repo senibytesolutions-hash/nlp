@@ -16,7 +16,7 @@ const Footer = () => (
           Preparing young lawyers across Pakistan to understand, engage with, and contribute to
           parliamentary process and democratic institutions.
         </p>
-        <div className="mt-6 flex gap-4">
+        {/* <div className="mt-6 flex gap-4">
           {[Facebook, Instagram, Linkedin].map((Icon, i) => (
             <a
               key={i}
@@ -27,8 +27,12 @@ const Footer = () => (
               <Icon size={16} />
             </a>
           ))}
-        </div>
-      </div>
+        </div> */}
+<a className="text-sm mt-4" href="/admin/login">
+  <br />
+    <span className="mr-2">•</span>
+  Admin Portal
+</a>      </div>
 
       <div>
         <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-gold-300">Navigate</h3>
@@ -86,7 +90,14 @@ const Footer = () => (
 
     <div className="border-t border-parchment/10 py-6">
       <p className="container-content text-center text-xs text-parchment/40">
-        &copy; {new Date().getFullYear()} National Lawyers Parliament. All rights reserved. <br /> Website Developed by SeniByte Solutions
+        &copy; {new Date().getFullYear()} National Lawyers Parliament. All rights reserved. <br /> Website Developed by <a
+  className="underline text-yellow-50"
+  href="https://www.senibytesolutions.com"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  SeniByte Solutions
+</a>
       </p>
     </div>
   </footer>

@@ -122,7 +122,7 @@ const About = () => (
       </div>
     </section>
 
-    <section className="bg-forest py-20 text-parchment">
+    {/* <section className="bg-forest py-20 text-parchment">
       <div className="container-content grid gap-12 md:grid-cols-[0.8fr_1.2fr] md:items-center">
         <AnimatedSection className="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
   <div className="h-40 w-40 overflow-hidden rounded-full border-4 border-parchment/20 bg-forest-600 shadow-card">
@@ -151,7 +151,7 @@ const About = () => (
           </blockquote>
         </AnimatedSection>
       </div>
-    </section>
+    </section> */}
 
     <section className="py-20">
       <div className="container-content grid gap-12 md:grid-cols-2 md:items-center">

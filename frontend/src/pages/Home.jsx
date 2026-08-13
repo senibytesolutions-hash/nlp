@@ -257,7 +257,7 @@ const Home = () => (
       </div>
     </section>
 
-    {/* PRESIDENT'S MESSAGE */}
+    {/* PRESIDENT'S MESSAGE
     <section className="bg-stone/60 py-24">
       <div className="container-content grid gap-12 md:grid-cols-[0.8fr_1.2fr] md:items-center">
          <AnimatedSection className="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
@@ -295,7 +295,7 @@ const Home = () => (
           </p>
         </AnimatedSection>
       </div>
-    </section>
+    </section> */}
 
     {/* ANNOUNCEMENTS */}
     <section className="pt-24">
